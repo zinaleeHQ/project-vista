@@ -123,7 +123,7 @@ project-vista/
 
 ## ✅ Project Manager Methodology Intervention
 
-In the first three projects, the PM controlled what each stakeholder saw and when. This dashboard inverts that relationship: stakeholders access data on their own terms, without PM mediation. The governance model exists because that shift creates a new failure mode — a red metric without context is a crisis that starts before anyone can frame it. Designing the system that protects against that is a different PM skill than writing a good executive briefing.
+The boundaries as set in this example for each stakeholder persona are judgment calls, not defaults. They reflect a specific organizational structure, trust dynamic, and decision-making culture. At a different company, every boundary in this document would need to be renegotiated from scratch — and that negotiation is the PM's job, not the AI's.These decisions require the PM to understand the company culture deeply enough to make the right call for each stakeholder group, or trust in that PM will erode.
 
 ---
 
