@@ -1,5 +1,10 @@
 # 📊 Project Vista: The Operational Intelligence Dashboard
 
+> **What this project is about, in plain language:**
+>
+> This project addresses what happens after the work is done: how do you give different stakeholders access to operational data without losing control of what they conclude from it? An AI tool designed the KPI framework, access architecture, and governance model. The PM's job is to make every boundary decision — who sees what and why — knowing that in a self-service system, those decisions are the only thing standing between the data and a misread that generates the wrong action.
+
+
 > **From Pushed Reports to Self-Service Visibility Across a Distributed Healthcare Enterprise**
 
 [![Methodology](https://img.shields.io/badge/Methodology-KPI%20Governance%20%7C%20Data%20Architecture-blue?style=flat-square)]()
