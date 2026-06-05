@@ -14,7 +14,7 @@ The first instinct when someone asks for a dashboard is to start sketching scree
 
 I did not start there. I started with the question: what is true, and who owns it?
 
-A KPI without an owner is a number without accountability. If the modifier error rate is 9.1% and no one owns that number, it will sit amber forever. If DSO is defined as "net" by finance and "gross" by operations, the first time a CFO and VP of Clinical Operations compare notes, the dashboard will have created a conflict that did not exist before.
+A KPI without an owner is a number without accountability. If the modifier error rate is 9.1% and no one owns that number, it will sit amber forever. If DSO is defined as “net” by finance and “gross” by operations, the first time a CFO and VP of Clinical Operations compare notes, the dashboard will have created a conflict that did not exist before.
 
 The prompt is engineered to complete the KPI taxonomy — with explicit definitions, owners, and measurement rules — before it generates a single stakeholder view. The AI cannot design what people see until the PM has decided what is true.
 
@@ -26,7 +26,7 @@ In Project Signal, the five audiences received different formats of the same inf
 
 The CFO does not just see a simpler version of the engineering dashboard. The CFO sees financial KPIs and clinical cost drivers and nothing else. The field lead does not see revenue at risk figures — not because they are confidential, but because a dollar figure without context for a clinician in a rural critical access hospital is noise that generates questions the PM then has to answer.
 
-This distinction matters because it changes what "audience-appropriate" means. In a pushed report, formatting is the tool. In a pull model, access architecture is the tool. Those require different PM decisions.
+This distinction matters because it changes what “audience-appropriate” means. In a pushed report, formatting is the tool. In a pull model, access architecture is the tool. Those require different PM decisions.
 
 ---
 
@@ -36,7 +36,7 @@ This is the rule that does not exist in the first three projects because it does
 
 In a pushed communication, the PM frames the red metric before it reaches the audience. In a self-service dashboard, the metric arrives unmediated. A red SOP adoption rate at Week 4 of a 6-week phased rollout looks like failure. It is not failure. It is a rollout in progress.
 
-The governance model includes a mandatory context note field for every KPI in Red status. The AI is prompted to generate those notes as part of the KPI scorecard. The PM's job is to validate that the context is accurate and sufficient — not to write it from scratch every week.
+The governance model includes a mandatory context note field for every KPI in Red status. The AI is prompted to generate those notes as part of the KPI scorecard. The PM’s job is to validate that the context is accurate and sufficient — not to write it from scratch every week.
 
 The rule: no KPI surfaces as Red without a context note explaining why it is Red and what the resolution path is.
 
@@ -46,7 +46,7 @@ The rule: no KPI surfaces as Red without a context note explaining why it is Red
 
 When a stakeholder pulls a report and sees a DSO of 43 days, they assume that number is current. If it is 72 hours stale because the billing system batch runs nightly, the assumption is wrong — and any decision made on that number is made on false information.
 
-I documented freshness expectations as a governance requirement in the data-sources file: each source system has an explicit refresh cadence, and that cadence is surfaced in the dashboard UI as a "last updated" timestamp. This is not a technical requirement. It is a trust requirement.
+I documented freshness expectations as a governance requirement in the data-sources file: each source system has an explicit refresh cadence, and that cadence is surfaced in the dashboard UI as a “last updated” timestamp. This is not a technical requirement. It is a trust requirement.
 
 Stale data that looks current is worse than no data. The dashboard design enforces this by requiring every data panel to display its source and last update time.
 
@@ -64,10 +64,30 @@ Stale data that looks current is worse than no data. The dashboard design enforc
 
 ---
 
+## What Happened When I Actually Ran It
+
+### Phase 0 was missing — and it matters
+
+This prompt assumes a Phase 0 happened before the design work began: a platform selection decision that determined where this dashboard would actually live. That decision is out of scope for this portfolio, but it would deeply affect every capability designed into this spec.
+
+Platform choice directly constrains four things built into this design: dynamic context note editing, the PM governance overlay, offline data caching for field-facing views, and the escalation alert layer. A static BI embed handles none of them. An enterprise platform like Power BI or Tableau handles some. A purpose-built application handles all of them — at significantly higher build cost. That tradeoff is a PM decision, not a technical one, and it should be made before Phase 1 begins, not after the spec is complete.
+
+### The dependency chain is a 5–10 day warning system
+
+The mock flagged the two leading indicators. The live run made their value clearer: RCM Platform API Error Rate and Revenue at Risk aren’t just early warnings — they’re the beginning of a cascade that takes 5–10 business days to reach DSO. A PM watching only DSO is always reacting. A PM watching the two leading indicators has a week of lead time to intervene before the financial damage lands.
+
+That cascade — API error → manual case rate → modifier errors → revenue at risk → DSO — is the most actionable thing in the governance model. It should be the first thing in the PM’s dashboard default view, not buried in the dependency chain documentation.
+
+### The rollout context note needs a hard date
+
+The governance model correctly flags SOP Adoption and Training Completion as “Red during rollout is expected — no escalation.” But “during rollout” is ambiguous the moment the rollout ends. Before the dashboard is published, the PM must set the Phase 3 completion date as a hard threshold in the governance model. After that date, Red triggers escalation. Without the date, the context note becomes a permanent excuse rather than a time-bounded explanation.
+
+---
+
 ## What I Would Do Differently With Real Data
 
 **Validate KPI definitions with each stakeholder before building.** A KPI definition that finance agrees to in isolation may conflict with how operations measures the same outcome. Those conflicts surface at the worst possible moment — when the dashboard is live and two executives are comparing notes.
 
 **Build the governance model before the first sprint, not after.** Vista is positioned as the capstone of a three-sprint delivery. In practice, KPI ownership conversations should happen during PI Planning, not after Sprint 3. The dashboard is much easier to trust when stakeholders have been part of defining what it measures.
 
-**Add a feedback mechanism.** The first version of any dashboard will measure the wrong things with the wrong frequency for at least one audience. A lightweight feedback loop — even a simple "this metric is not useful to me" button — is cheaper than a full redesign cycle after go-live.
+**Add a feedback mechanism.** The first version of any dashboard will measure the wrong things with the wrong frequency for at least one audience. A lightweight feedback loop — even a simple “this metric is not useful to me” button — is cheaper than a full redesign cycle after go-live.
