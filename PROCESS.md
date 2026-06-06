@@ -1,8 +1,16 @@
-# Project Vista: PM Decision Log
+# The PROCESS — How I Built This Project
 
-## Why This Document Exists
+*Zina Lee, Product Manager*
 
-Every project in this portfolio includes a PROCESS.md that separates what the AI did from what the PM decided. Vista is no different — but the decisions here are a different category than the ones in the first three projects.
+---
+
+## Why I Built This
+
+I've spent years as a PM in environments where AI tools were restricted or unavailable — including federal contracting work where the security posture simply didn't permit it. That means my AI fluency has lived entirely in theory: frameworks, certifications, strategic understanding — but no portfolio artifacts to show for it.
+
+This project exists to close that gap honestly: by building something grounded in a real company's actual technology challenges, using AI as a transparent and accountable tool, and documenting every decision along the way.
+
+---
 
 Horizon, Clarity, and Signal were all about designing outputs: what gets built, how a process changes, what gets communicated. Vista is about designing a system. The decisions are structural rather than tactical, and the failure modes are slower and quieter — which makes them more dangerous.
 
@@ -91,3 +99,9 @@ The governance model correctly flags SOP Adoption and Training Completion as “
 **Build the governance model before the first sprint, not after.** Vista is positioned as the capstone of a three-sprint delivery. In practice, KPI ownership conversations should happen during PI Planning, not after Sprint 3. The dashboard is much easier to trust when stakeholders have been part of defining what it measures.
 
 **Add a feedback mechanism.** The first version of any dashboard will measure the wrong things with the wrong frequency for at least one audience. A lightweight feedback loop — even a simple “this metric is not useful to me” button — is cheaper than a full redesign cycle after go-live.
+
+---
+
+*This document reflects my actual decision-making process in building this project. It is intended to give reviewers — technical and non-technical — an honest view of where the PM thinking ends and the AI tooling begins — and vice-versa.*
+
+*[Back to README](./README.md)*
