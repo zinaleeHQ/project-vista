@@ -128,7 +128,7 @@ project-vista/
 
 ## ✅ Project Manager Methodology Intervention
 
-The boundaries as set in this example for each stakeholder persona are judgment calls, not defaults. They reflect a specific organizational structure, trust dynamic, and decision-making culture. At a different company, every boundary in this document would need to be renegotiated from scratch — and that negotiation is the PM's job, not the AI's.These decisions require the PM to understand the company culture deeply enough to make the right call for each stakeholder group, or trust in that PM will erode.
+The boundaries as set in this example for each stakeholder persona are judgment calls, not defaults. They reflect a specific organizational structure, trust dynamic, and decision-making culture. At a different company, every boundary in this document would need to be renegotiated from scratch — and that negotiation is the PM's job, not the AI's. These decisions require the PM to understand the company culture deeply enough to make the right call for each stakeholder group, or trust in that PM will erode.
 
 ---
 
