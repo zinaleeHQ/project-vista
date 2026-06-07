@@ -76,7 +76,7 @@ Stale data that looks current is worse than no data. The dashboard design enforc
 
 ### Phase 0 was missing — and it matters
 
-This prompt assumes a Phase 0 happened before the design work began: a platform selection decision that determined where this dashboard would actually live. That decision is out of scope for this portfolio, but it would deeply affect every capability designed into this spec.
+This prompt assumes a Phase 0 happened before the design work began: a platform selection decision that determined where this dashboard would actually live. That decision is out of scope for this portfolio, but it would deeply affect every capability designed into this spec. Designing the actual dashboard (and the tools available to use for the reporting) would be limited by what the platform can do, including the UX.
 
 Platform choice directly constrains four things built into this design: dynamic context note editing, the PM governance overlay, offline data caching for field-facing views, and the escalation alert layer. A static BI embed handles none of them. An enterprise platform like Power BI or Tableau handles some. A purpose-built application handles all of them — at significantly higher build cost. That tradeoff is a PM decision, not a technical one, and it should be made before Phase 1 begins, not after the spec is complete.
 
@@ -100,15 +100,21 @@ That cascade — API error → manual case rate → modifier errors → revenue 
 
 The governance model correctly flags SOP Adoption and Training Completion as "Red during rollout is expected — no escalation." But "during rollout" is ambiguous the moment the rollout ends. Before the dashboard is published, the PM must set the Phase 3 completion date as a hard threshold in the governance model. After that date, Red triggers escalation. Without the date, the context note becomes a permanent excuse rather than a time-bounded explanation.
 
----
 
-## What I Would Do Differently With Real Data
 
-**Validate KPI definitions with each stakeholder before building.** A KPI definition that finance agrees to in isolation may conflict with how operations measures the same outcome. Those conflicts surface at the worst possible moment — when the dashboard is live and two executives are comparing notes.
+### Live run observations *(from running this prompt with Claude)*
 
-**Build the governance model before the first sprint, not after.** Vista is positioned as the capstone of a three-sprint delivery. In practice, KPI ownership conversations should happen during PI Planning, not after Sprint 3. The dashboard is much easier to trust when stakeholders have been part of defining what it measures.
+*What held up well:*
+- The dependency chain is clean and the cascade timing is specific — that's genuinely useful output, not generic filler
+- The "explanation before metric" rule for the Field Lead view is a good catch that a lot of dashboard designers miss
+- The escalation triggers are specific conditions, not just "when it goes Red" — that's the prompt doing its job
 
-**Add a feedback mechanism.** The first version of any dashboard will measure the wrong things with the wrong frequency for at least one audience. A lightweight feedback loop — even a simple "this metric is not useful to me" button — is cheaper than a full redesign cycle after go-live.
+*What to pressure-test with real data:*
+- The dollar thresholds (Revenue at Risk > $800K for escalation) are illustrative — a real org would calibrate those in the PM judgment phase
+- The data quality rules would need validation against actual system behavior before they're trustworthy
+
+*What this confirms about the prompt design:*
+The pause point works exactly as designed. Someone running this prompt genuinely has to stop, read five access boundary rationales, and decide whether they're right — before anything else generates. That's the judgment showcase doing its job.
 
 ---
 
