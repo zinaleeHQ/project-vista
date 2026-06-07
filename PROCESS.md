@@ -100,6 +100,15 @@ That cascade — API error → manual case rate → modifier errors → revenue 
 
 The governance model correctly flags SOP Adoption and Training Completion as "Red during rollout is expected — no escalation." But "during rollout" is ambiguous the moment the rollout ends. Before the dashboard is published, the PM must set the Phase 3 completion date as a hard threshold in the governance model. After that date, Red triggers escalation. Without the date, the context note becomes a permanent excuse rather than a time-bounded explanation.
 
+---
+
+## What I Would Do Differently With Real Data
+
+**Validate KPI definitions with each stakeholder before building.** A KPI definition that finance agrees to in isolation may conflict with how operations measures the same outcome. Those conflicts surface at the worst possible moment — when the dashboard is live and two executives are comparing notes.
+
+**Build the governance model before the first sprint, not after.** Vista is positioned as the capstone of a three-sprint delivery. In practice, KPI ownership conversations should happen during PI Planning, not after Sprint 3. The dashboard is much easier to trust when stakeholders have been part of defining what it measures.
+
+**Add a feedback mechanism.** The first version of any dashboard will generally measure the wrong things with the wrong frequency for at least one audience. A lightweight feedback loop — even a simple "this metric is not useful to me" button — is cheaper than a full redesign cycle after go-live.
 
 
 ### Live run observations *(from running this prompt with Claude)*
