@@ -130,7 +130,22 @@ project-vista/
 
 The boundaries as set in this example for each stakeholder persona are judgment calls, not defaults. They reflect a specific organizational structure, trust dynamic, and decision-making culture. At a different company, every boundary in this document would need to be renegotiated from scratch — and that negotiation is the PM's job, not the AI's. These decisions require the PM to understand the company culture deeply enough to make the right call for each stakeholder group, or trust in that PM will erode.
 
+
+
 ---
+
+
+## 🚀 Want to Try This Yourself?
+
+This project has a live HTML page with a one-click **Copy Prompt** button that copies the complete prompt for you, including data. Paste/Ctrl-V into Claude, GPT-4, or Gemini — no setup required.
+
+👉 [Open Project Signal Prompt Copy page](https://zinaleeHQ.github.io/project-signal/)
+
+Each prompt pauses at a PM judgment checkpoint before the final phase. Answer "yes" when you are ready to move forward. (That pause is the point.)
+
+
+---
+
 
 ## 🔗 Portfolio Navigation
 
