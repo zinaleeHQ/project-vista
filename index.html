@@ -1,234 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project Vista · Operational Intelligence Dashboard</title>
-  <style>
-    :root {
-      --green:       #1a7f5a;
-      --green-dark:  #0f5c3f;
-      --green-light: #e6f5ef;
-      --text:        #1a1a2e;
-      --muted:       #5a5a7a;
-      --border:      #c8e6d8;
-      --bg:          #f4fbf8;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 48px 24px;
-    }
-    .card {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 48px 48px 40px;
-      max-width: 720px;
-      width: 100%;
-      box-shadow: 0 4px 24px rgba(26,127,90,0.08);
-    }
-    .badge {
-      display: inline-block;
-      background: var(--green-light);
-      color: var(--green-dark);
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      padding: 4px 12px;
-      border-radius: 20px;
-      margin-bottom: 20px;
-    }
-    h1 {
-      font-size: 28px;
-      font-weight: 700;
-      line-height: 1.25;
-      margin-bottom: 8px;
-      color: var(--text);
-    }
-    .subtitle {
-      font-size: 15px;
-      color: var(--muted);
-      margin-bottom: 32px;
-      line-height: 1.5;
-    }
-    .summary-box {
-      background: var(--green-light);
-      border-left: 4px solid var(--green);
-      border-radius: 0 8px 8px 0;
-      padding: 20px 24px;
-      margin-bottom: 36px;
-      font-size: 15px;
-      line-height: 1.7;
-      color: #1a3328;
-    }
-    .summary-box strong { color: var(--green-dark); }
-    .audience-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 36px;
-    }
-    .chip {
-      background: #fff;
-      border: 1.5px solid var(--border);
-      color: var(--green-dark);
-      font-size: 13px;
-      font-weight: 600;
-      padding: 6px 16px;
-      border-radius: 20px;
-    }
-    .copy-btn {
-      width: 100%;
-      padding: 16px;
-      background: var(--green);
-      color: #fff;
-      font-size: 16px;
-      font-weight: 600;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: background .15s, transform .1s;
-      margin-bottom: 12px;
-    }
-    .copy-btn:hover  { background: var(--green-dark); }
-    .copy-btn:active { transform: scale(.98); }
-    .copy-btn.success { background: #0f5c3f; }
-    .copy-hint {
-      text-align: center;
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 32px;
-    }
-    .divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
-    .links { display: flex; gap: 20px; flex-wrap: wrap; }
-    .links a {
-      color: var(--green);
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 500;
-    }
-    .links a:hover { text-decoration: underline; }
-    .status-bar {
-      margin-top: 16px;
-      font-size: 13px;
-      color: var(--muted);
-      min-height: 20px;
-    }
-    footer {
-      margin-top: 40px;
-      font-size: 13px;
-      color: #aaa;
-      text-align: center;
-    }
-    @media (max-width: 600px) {
-      .card { padding: 32px 24px; }
-      h1 { font-size: 22px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Vista — The Operational Intelligence Dashboard</title>
+<style>
+  :root {
+    --primary: #1a7f5a;
+    --primary-dark: #0f5c3f;
+    --primary-light: #e6f5ef;
+    --text: #1a1a2e;
+    --muted: #555;
+    --border: #ddd;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5fbf8; color: var(--text); line-height: 1.6; }
+  header { background: var(--primary); color: white; padding: 2.5rem 2rem 2rem; }
+  header h1 { font-size: 1.75rem; font-weight: 700; margin-bottom: 0.4rem; }
+  header .subtitle { opacity: 0.85; font-size: 0.95rem; }
+  .container { max-width: 760px; margin: 0 auto; padding: 2rem 1.5rem; }
+  .card { background: white; border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; }
+  .card h2 { font-size: 1.1rem; color: var(--primary-dark); margin-bottom: 0.75rem; }
+  .plain-lang { background: var(--primary-light); border-left: 4px solid var(--primary); padding: 1rem 1.25rem; border-radius: 0 6px 6px 0; font-size: 0.95rem; margin-bottom: 1.5rem; }
+  .plain-lang p { color: #1a3328; line-height: 1.65; }
+  .btn { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--primary); color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+  .btn:hover { background: var(--primary-dark); }
+  .btn:disabled { background: #999; cursor: not-allowed; }
+  .status-msg { margin-top: 0.6rem; font-size: 0.85rem; color: var(--muted); min-height: 1.2em; }
+  .status-msg.ok { color: #2d7a2d; }
+  .status-msg.err { color: #c0392b; }
+  .steps ol { padding-left: 1.25rem; }
+  .steps li { margin-bottom: 0.5rem; font-size: 0.95rem; }
+  .steps li strong { color: var(--primary-dark); }
+  .audiences { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.6rem; }
+  .audience-chip { background: var(--primary-light); border: 1px solid #7ec4a8; border-radius: 20px; padding: 0.3rem 0.8rem; font-size: 0.82rem; color: var(--primary-dark); text-align: center; }
+  .nav-links { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+  .nav-links a { color: var(--primary); text-decoration: none; font-size: 0.9rem; border: 1px solid var(--primary); padding: 0.3rem 0.75rem; border-radius: 4px; transition: all 0.15s; }
+  .nav-links a:hover { background: var(--primary); color: white; }
+  footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 1rem; }
+</style>
 </head>
 <body>
 
-<div class="card">
-  <div class="badge">📊 Project Vista</div>
-  <h1>The Operational Intelligence Dashboard</h1>
-  <p class="subtitle">PM Portfolio · Healthcare AI · Zina Lee</p>
+<header>
+  <h1>📊 Project Vista</h1>
+  <div class="subtitle">The Operational Intelligence Dashboard · AI-Augmented Healthcare PM Portfolio</div>
+</header>
 
-  <div class="summary-box">
-    <strong>What this project is about, in plain language:</strong><br>
-    This project addresses what happens after the work is done: how do you give different
-    stakeholders access to operational data without losing control of what they conclude from it?
-    An AI tool designed the KPI framework, access architecture, and governance model. The
-    <strong>PM's job</strong> is to make every boundary decision — who sees what and why —
-    knowing that in a self-service system, those decisions are the only thing standing between
-    the data and a misread that generates the wrong action.
+<div class="container">
+
+  <div class="plain-lang">
+    <p>This project addresses what happens after the work is done: how do you give different stakeholders access to operational data without losing control of what they conclude from it? An AI tool designed the KPI framework, access architecture, and governance model. The PM's job is to make every boundary decision — who sees what and why — knowing that in a self-service system, those decisions are the only thing standing between the data and a misread that generates the wrong action.</p>
   </div>
 
-  <p style="font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:12px;">
-    Dashboard Views
-  </p>
-  <div class="audience-row">
-    <span class="chip">CMO</span>
-    <span class="chip">CFO</span>
-    <span class="chip">VP Engineering</span>
-    <span class="chip">Clinical Field Lead</span>
-    <span class="chip">PM</span>
+  <div class="card">
+    <h2>⚡ Run This Prompt</h2>
+    <p style="margin-bottom:1rem;font-size:0.95rem;">Copy the complete self-contained prompt below and paste it into any AI assistant. All data is embedded inline — no additional files needed.</p>
+    <button class="btn" id="copyBtn" onclick="copyPrompt()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+      Copy Full Prompt
+    </button>
+    <div class="status-msg" id="statusMsg">Loading prompt...</div>
   </div>
 
-  <button class="copy-btn" id="copyBtn" onclick="copyPrompt()">
-    📋 Copy Full Prompt to Clipboard
-  </button>
-  <p class="copy-hint">Paste into Claude, GPT-4, or Gemini · Prompt pauses before Phase 3 for your review</p>
-  <div class="status-bar" id="statusBar"></div>
-
-  <hr class="divider" />
-
-  <div class="links">
-    <a href="https://github.com/zinaleeHQ/project-vista" target="_blank">GitHub Repo →</a>
-    <a href="https://github.com/zinaleeHQ/project-vista/blob/main/run-this-prompt.md" target="_blank">View Prompt →</a>
-    <a href="https://github.com/zinaleeHQ" target="_blank">Full Portfolio →</a>
+  <div class="card steps">
+    <h2>📋 What to Do After Copying</h2>
+    <ol>
+      <li>Paste into Claude, ChatGPT, or Gemini</li>
+      <li>The AI runs <strong>Phase 1</strong> (KPI taxonomy and definitions) and <strong>Phase 2</strong> (stakeholder view design) automatically</li>
+      <li>The AI pauses before Phase 3 — this is your <strong>evaluation checkpoint</strong>. Review the access architecture: does every boundary decision reflect your intent?</li>
+      <li>Approve to proceed — the AI runs <strong>Phase 3</strong> (governance model) and <strong>Phase 4</strong> (dashboard specification)</li>
+      <li>The PM judgment call: every access boundary in the output is yours to validate — the AI proposes, you decide</li>
+    </ol>
   </div>
+
+  <div class="card">
+    <h2>📊 Five Dashboard Views, Different Data</h2>
+    <p style="margin-bottom:0.75rem;font-size:0.9rem;">Each stakeholder sees different data — not just a different format of the same data. The access boundaries are PM decisions, not technical defaults.</p>
+    <div class="audiences">
+      <div class="audience-chip">CMO</div>
+      <div class="audience-chip">CFO</div>
+      <div class="audience-chip">VP Engineering</div>
+      <div class="audience-chip">Clinical Field Lead</div>
+      <div class="audience-chip">PM</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🔗 Portfolio Navigation</h2>
+    <div class="nav-links">
+      <a href="https://github.com/zinaleeHQ/project-horizon">Project Horizon ↗</a>
+      <a href="https://github.com/zinaleeHQ/project-clarity">Project Clarity ↗</a>
+      <a href="https://github.com/zinaleeHQ/project-signal">Project Signal ↗</a>
+      <a href="https://github.com/zinaleeHQ/project-vista">Project Vista (this repo) ↗</a>
+      <a href="https://github.com/zinaleeHQ">Portfolio Overview ↗</a>
+    </div>
+  </div>
+
 </div>
 
-<footer>Zina Lee · PM Portfolio · Built with AI · Healthcare Operations</footer>
+<footer>
+  Portfolio simulation · Zina Lee · Built June 2026
+</footer>
 
 <script>
-  const RAW_URL = 'https://raw.githubusercontent.com/zinaleeHQ/project-vista/main/run-this-prompt.md';
-  let promptText = null;
-  let loadError  = false;
+const RAW_URL = 'https://raw.githubusercontent.com/zinaleeHQ/project-vista/main/run-this-prompt.md';
+let promptText = null;
 
-  fetch(RAW_URL)
-    .then(r => { if (!r.ok) throw new Error('fetch failed'); return r.text(); })
-    .then(text => {
-      promptText = text;
-      document.getElementById('statusBar').textContent = '✓ Prompt loaded and ready to copy';
-    })
-    .catch(() => {
-      loadError = true;
-      document.getElementById('statusBar').textContent =
-        '⚠ Could not pre-load prompt. Button will open GitHub instead.';
-    });
+fetch(RAW_URL)
+  .then(r => { if (!r.ok) throw new Error('fetch failed'); return r.text(); })
+  .then(text => {
+    const marker = '## PROMPT (copy everything from here to the end of this file)';
+    const promptStart = text.indexOf(marker);
+    promptText = promptStart >= 0 ? text.slice(promptStart + marker.length).replace(/^\s*---\s*\n/, '').trimStart() : text;
+    document.getElementById('statusMsg').textContent = '✓ Prompt loaded and ready to copy';
+    document.getElementById('statusMsg').className = 'status-msg ok';
+  })
+  .catch(() => {
+    document.getElementById('statusMsg').textContent = 'Could not pre-load prompt. Click to copy directly from GitHub.';
+    document.getElementById('statusMsg').className = 'status-msg err';
+  });
 
-  async function copyPrompt() {
-    const btn = document.getElementById('copyBtn');
-    const bar = document.getElementById('statusBar');
-
-    if (loadError || !promptText) {
-      window.open(RAW_URL, '_blank');
-      bar.textContent = 'Opened prompt in new tab — copy it from there.';
-      return;
-    }
-
-    try {
-      await navigator.clipboard.writeText(promptText);
-    } catch (e) {
-      // Fallback for older browsers
-      const ta = document.createElement('textarea');
-      ta.value = promptText;
-      ta.style.position = 'fixed';
-      ta.style.opacity  = '0';
-      document.body.appendChild(ta);
-      ta.select();
-      document.execCommand('copy');
-      document.body.removeChild(ta);
-    }
-
-    btn.textContent = '✅ Copied!';
-    btn.classList.add('success');
-    bar.textContent = 'Prompt copied — paste it into your AI assistant to begin.';
-
-    setTimeout(() => {
-      btn.textContent = '📋 Copy Full Prompt to Clipboard';
-      btn.classList.remove('success');
-    }, 3000);
+async function copyPrompt() {
+  const btn = document.getElementById('copyBtn');
+  const msg = document.getElementById('statusMsg');
+  if (!promptText) {
+    window.open(RAW_URL, '_blank');
+    return;
   }
+  try {
+    await navigator.clipboard.writeText(promptText);
+    btn.textContent = '✓ Copied!';
+    msg.textContent = 'Prompt copied — paste it into your AI assistant now.';
+    msg.className = 'status-msg ok';
+    setTimeout(() => { btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy Full Prompt'; }, 3000);
+  } catch {
+    const ta = document.createElement('textarea');
+    ta.value = promptText;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    btn.textContent = '✓ Copied!';
+    msg.textContent = 'Prompt copied — paste it into your AI assistant now.';
+    msg.className = 'status-msg ok';
+    setTimeout(() => { btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy Full Prompt'; }, 3000);
+  }
+}
 </script>
 </body>
 </html>
