@@ -111,8 +111,8 @@ The governance model correctly flags SOP Adoption and Training Completion as "Re
 **Add a feedback mechanism.** The first version of any dashboard will generally measure the wrong things with the wrong frequency for at least one audience. A lightweight feedback loop — even a simple "this metric is not useful to me" button — is cheaper than a full redesign cycle after go-live.
 
 
-### Live run observations *(from running this prompt with Claude)*
-Asking AI to validate and test its data is usually a very valuable step in the prompt process.
+### Live run observations from Claude *(from running this prompt with Claude)*
+(Asking AI to validate and test its data is usually a very valuable step in the prompt process.)
 
 *What held up well:*
 - The dependency chain is clean and the cascade timing is specific — that's genuinely useful output, not generic filler
