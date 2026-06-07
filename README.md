@@ -1,4 +1,4 @@
-# 📊 Project Vista: The Operational Intelligence Dashboard
+# Project Vista: The Operational Intelligence Dashboard
 
 > **What this project is about, in plain language:**
 >
