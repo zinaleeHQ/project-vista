@@ -25,7 +25,7 @@ In Projects Horizon, Clarity, and Signal, the PM controlled what each stakeholde
 
 **That creates a new failure mode the other three projects did not have to solve: a red metric without context is a crisis that starts before anyone can frame it.**
 
-This project documents an AI-assisted design of the operational intelligence layer — KPI framework, stakeholder-filtered views, and governance model — that makes self-service visibility safe, accurate, and trusted.
+This project documents an AI-assisted design of that operational intelligence layer — KPI framework, stakeholder-filtered views, and governance model — that makes self-service visibility safe, accurate, and trusted.
 
 ---
 
