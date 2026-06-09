@@ -158,7 +158,7 @@ This is **Agent 4 of 4** — the operational visibility layer that makes everyth
 | [Project Signal](https://github.com/zinaleeHQ/project-signal) | How do we keep every stakeholder aligned? | Stakeholder Intelligence · Audience Mapping |
 | **Project Vista** (this repo) | How do we give every stakeholder self-service visibility? | KPI Governance · Data Architecture |
 
-[**← Back to Portfolio Overview**](https://github.com/zinaleeHQ)
+[**← Back to Portfolio Overview**](https://github.com/zinaleeHQ/zinaleeHQ/)
 
 ---
 
