@@ -20,7 +20,7 @@ Horizon, Clarity, and Signal were all about designing outputs: what gets built, 
 
 The first instinct when someone asks for a dashboard is to start sketching screens. What should it look like? What should it show?
 
-I did not start there. I started with the question: what is true, and who owns it?
+I did not start there. I started with the question: what is true, and who owns it? (But see the section on Phase 0 below.)
 
 A KPI without an owner is a number without accountability. If the modifier error rate is 9.1% and no one owns that number, it will sit amber forever. If DSO is defined as "net" by finance and "gross" by operations, the first time a CFO and VP of Clinical Operations compare notes, the dashboard will have created a conflict that did not exist before.
 
