@@ -8,7 +8,7 @@
 
 Part of the promise of AI for business is communication and clarity. Organizations racing to develop it will tell you that AI will ensure all stakeholders — from frontline teams to the C-suite — can know at any time what the state of an initiative is, where the blockers are, and what the risks look like.
 
-The very real problem with all information, all the time is that information overload is real — and crucially, information without context, ***especially*** when it's bad news, can create confusion or far worse. When everyone has access to everything, all the time, without the framing to understand it, chaos is a very real risk.
+The very real problem with "all information, all the time" is that information overload is real — and crucially, information without context, ***especially*** when it's bad news, can create confusion or far worse. When everyone has access to everything, all the time, without the framing to understand it, chaos is a very real risk.
 
 Horizon, Clarity, and Signal were all about designing outputs: what gets built, how a process changes, what gets communicated. Vista is about designing a system — with guardrails and deliberate structural decisions. The decisions here are structural rather than tactical, and the failure modes are slower and quieter, which makes them more dangerous. Vista is built to prevent them.
 
