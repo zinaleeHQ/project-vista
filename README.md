@@ -162,4 +162,4 @@ This is **Agent 4 of 4** — the operational visibility layer that makes everyth
 
 ---
 
-*Portfolio simulation · All scenario details constructed from publicly available information · No proprietary data from any organization has been used · Built June 2026*
+*Portfolio case studies · All scenario details constructed from publicly available information · No proprietary data from any organization has been used · Built June 2026*
