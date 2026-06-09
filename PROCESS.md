@@ -6,13 +6,11 @@
 
 ## Why I Built This
 
-I've spent years as a PM in environments where AI tools were restricted or unavailable — including federal contracting work where the security posture simply didn't permit it. That means my AI fluency has lived entirely in theory: frameworks, certifications, strategic understanding — but no portfolio artifacts to show for it.
+Part of the promise of AI for business is communication and clarity. Organizations racing to develop it will tell you that AI will ensure all stakeholders — from frontline teams to the C-suite — can know at any time what the state of an initiative is, where the blockers are, and what the risks look like.
 
-This project exists to close that gap honestly: by building something grounded in a real company's actual technology challenges, using AI as a transparent and accountable tool, and documenting every decision along the way.
+The very real problem with all information, all the time is that information overload is real — and crucially, information without context, ***especially*** when it's bad news, can create confusion or far worse. When everyone has access to everything, all the time, without the framing to understand it, chaos is a very real risk.
 
----
-
-Horizon, Clarity, and Signal were all about designing outputs: what gets built, how a process changes, what gets communicated. Vista is about designing a system. The decisions are structural rather than tactical, and the failure modes are slower and quieter — which makes them more dangerous.
+Horizon, Clarity, and Signal were all about designing outputs: what gets built, how a process changes, what gets communicated. Vista is about designing a system — with guardrails and deliberate structural decisions. The decisions here are structural rather than tactical, and the failure modes are slower and quieter, which makes them more dangerous. Vista is built to prevent them.
 
 ---
 
@@ -111,7 +109,7 @@ The governance model correctly flags SOP Adoption and Training Completion as "Re
 **Add a feedback mechanism.** The first version of any dashboard will generally measure the wrong things with the wrong frequency for at least one audience. A lightweight feedback loop — even a simple "this metric is not useful to me" button — is cheaper than a full redesign cycle after go-live.
 
 
-### Live run observations from Claude *(from running this prompt with Claude)*
+### Live run observations written by Claude *(from running this prompt with Claude)*
 (Asking AI to validate and test its data is usually a very valuable step in the prompt process.)
 
 *What held up well:*
