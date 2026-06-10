@@ -106,7 +106,7 @@ The PM governance decisions from Phase 4 — KPI ownership, access boundaries, c
 
 ### The dependency chain is a 5–10 day warning system
 
-The mock flagged the two leading indicators. The live run made their value clearer: RCM Platform API Error Rate and Revenue at Risk aren't just early warnings — they're the beginning of a cascade that takes 5–10 business days to reach DSO. A PM watching only DSO is always reacting. A PM watching the two leading indicators has a week of lead time to intervene before the financial damage lands.
+The mock flagged the two leading indicators. The live run made their value clearer: RCM Platform API Error Rate and Revenue at Risk aren't just early warnings — they're the beginning of a cascade that takes 5–10 business days to reach Days Sales Outstanding (DSO). A PM watching only DSO is always reacting. A PM watching the two leading indicators has a week of lead time to intervene before the financial damage lands.
 
 That cascade — API error → manual case rate → modifier errors → revenue at risk → DSO — is the most actionable thing in the governance model. It should be the first thing in the PM's dashboard default view, not buried in the dependency chain documentation.
 
