@@ -71,6 +71,7 @@ For each of the five audiences, define:
 - Boundaries are defined by narrative risk, not confidentiality
 - A metric is excluded from an audience view if it would generate misinterpretation, alarm, or action outside that audience's scope — not because it is secret
 - The CFO view may include clinical KPIs if they are direct cost drivers — document which ones and why
+- The CFO view may also include delivery metrics (e.g., Defect Spillover Rate) if the CFO has specifically requested them to track correlation with financial outcomes. Surface these with mandatory engineering context attached, framed in terms of downstream financial impact rather than sprint delivery counts. Document the exception rationale.
 - The field lead view must be fully functional at 3G speeds — no real-time dependencies permitted
 
 **No naked red rule:**
