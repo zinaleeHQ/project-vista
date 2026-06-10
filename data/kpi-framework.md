@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This document defines the 16 KPIs that form the measurement backbone of the Project Vista dashboard. Each KPI is drawn directly from the work products of Projects Horizon, Clarity, and Signal. No KPI appears here that was not already implied by the prior three projects — Vista measures what was built, not abstract ideals.
+This document defines the 17 KPIs that form the measurement backbone of the Project Vista dashboard. Each KPI is drawn directly from the work products of Projects Horizon, Clarity, and Signal. No KPI appears here that was not already implied by the prior three projects — Vista measures what was built, not abstract ideals.
 
 **Design rule:** Every KPI has an owner. A metric without an owner is a number without accountability.
 
@@ -44,11 +44,15 @@ This document defines the 16 KPIs that form the measurement backbone of the Proj
 | KPI | Definition | Data Source | Owner | Target | Frequency |
 |---|---|---|---|---|---|
 | Sprint Velocity | Story points completed per 2-week sprint | Sprint tracking system | VP Engineering | 35–40 SP | Per sprint |
+| Defect Spillover Rate | % of sprint-committed scope (story points) that carries over undelivered to the following sprint | Sprint tracking system | VP Engineering | < 10% per sprint | Per sprint |
 | Epic Completion Rate | % of sprint-committed epics delivered on schedule | Sprint tracking system | VP Engineering | > 95% | Per sprint |
 | RCM Platform API Error Rate | % of API calls resulting in error or timeout | RCM platform API | VP Engineering | < 0.5% | Real-time |
 | HL7 Mapping Accuracy | % of HL7 transactions processed without mapping error | HL7 interface engine | VP Engineering | > 99.5% | Real-time |
 
-**Dependency note:** HL7 Mapping Accuracy and RCM Platform API Error Rate are the two technical KPIs with direct downstream impact on Clinical and Financial categories. If either goes Red, Clinical and Financial KPIs will degrade within 24–48 hours. This dependency chain is documented in the governance model escalation triggers.
+**Dependency note:** HL7 Mapping Accuracy and RCM Platform API Error Rate are the two technical KPIs with direct downstream impact on Clinical and Financial categories. If either goes Red, Clinical and Financial KPIs will degrade within 
+24–48 hours. This dependency chain is documented in the governance model escalation triggers.
+
+**CFO exception note:** Defect Spillover Rate is a VP Engineering-owned metric that also surfaces in the CFO view by specific request. The CFO identified a pattern between sprint delivery gaps and downstream revenue cycle delays. It is surfaced in the CFO view with mandatory engineering context attached, framed in terms of downstream financial impact rather than raw sprint delivery counts. VP Engineering owns this metric regardless of which audience view displays it.
 
 ---
 
