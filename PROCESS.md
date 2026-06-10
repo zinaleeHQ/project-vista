@@ -72,6 +72,8 @@ This is the difference between a rigid governance framework and a governed one. 
 
 Note: Defect Spillover Rate is owned by VP Engineering regardless of which audience view surfaces it. The CFO consumes it. Engineering owns it. That distinction is preserved in the governance model.
 
+---
+
 ## What the AI Did vs. What the PM Decided
 
 | AI Executed | PM Decided |
