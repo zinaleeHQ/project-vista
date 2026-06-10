@@ -58,6 +58,20 @@ Stale data that looks current is worse than no data. The dashboard design enforc
 
 ---
 
+## Decision 5: Governed Exceptions Are Still Governed
+
+The CFO requested Defect Spillover Rate after identifying a pattern between sprint delivery gaps and downstream revenue cycle delays. The instinct might be to either refuse the request (it's an engineering metric) or simply add it to the CFO dashboard (they asked for it).
+
+Neither is the right answer.
+
+Refusing ignores a legitimate signal the CFO has already identified. Adding it without context hands a financial executive a delivery metric they'll interpret through a financial lens — which will generate the wrong conversation with engineering every time.
+
+The decision: surface Defect Spillover Rate in the CFO view with mandatory engineering context attached, framing the metric in terms of downstream financial impact rather than raw sprint delivery counts. The access boundary rule wasn't overridden. It was applied with nuance.
+
+This is the difference between a rigid governance framework and a governed one. The PM's job isn't to enforce rules. It's to make sure the right people have the right information in the right frame.
+
+Note: Defect Spillover Rate is owned by VP Engineering regardless of which audience view surfaces it. The CFO consumes it. Engineering owns it. That distinction is preserved in the governance model.
+
 ## What the AI Did vs. What the PM Decided
 
 | AI Executed | PM Decided |
