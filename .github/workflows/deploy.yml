@@ -15,6 +15,7 @@ concurrency:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  NEXT_TELEMETRY_DISABLED: 1
 
 jobs:
   deploy:
@@ -25,24 +26,29 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: 24
           cache: 'npm'
           cache-dependency-path: './dashboard/package.json'
+
       - name: Install dependencies
         run: |
           cd dashboard
           npm install
+
       - name: Build project
         run: |
           cd dashboard
           npm run build
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dashboard/out # Next.js static files compile into /out
+          path: ./dashboard/out
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
