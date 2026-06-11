@@ -14,7 +14,7 @@
 ---
 
 
-- ### 🚀 Live Interactive Simulation (AI-Augmented Prototype)
+### 🚀 Live Interactive Simulation (AI-Augmented Prototype)
 
 To demonstrate how these governance boundaries and user views operate in practice, I used an AI-augmented rapid prototyping workflow to quickly turn this framework into [a fully functional software demo](https://zinaleeHQ.github.io/project-vista/dashboard/). 
 
