@@ -45,11 +45,17 @@ jobs:
           npm run build
           touch out/.nojekyll
 
+      - name: Fix Subfolder Routing Paths
+        run: |
+          # Creates a real physical directory structure so GitHub maps /dashboard/ correctly
+          mkdir -p final-dist/dashboard
+          cp -r dashboard/out/* final-dist/dashboard/
+          touch final-dist/.nojekyll
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Automatically detects and maps your Next.js directory structure
-          path: ./dashboard/out
+          path: ./final-dist
 
       - name: Deploy to GitHub Pages
         id: deployment
