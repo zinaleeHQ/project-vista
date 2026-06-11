@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  trailingSlash: true, // Optimizes pages for exact /folder/index.html generation
+  basePath: '/project-vista/dashboard', // Links your CSS/JS files to the subfolder path
+  assetPrefix: '/project-vista/dashboard/', // Ensures graphics and layout files load correctly
+  trailingSlash: true,
   images: {
     unoptimized: true,
   },
