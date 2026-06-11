@@ -16,7 +16,7 @@
 
 - ### 🚀 Live Interactive Simulation (AI-Augmented Prototype)
 
-To demonstrate how these governance boundaries and user views operate in practice, I used an AI-augmented rapid prototyping workflow to quickly turn this framework into a fully functional software demo. 
+To demonstrate how these governance boundaries and user views operate in practice, I used an AI-augmented rapid prototyping workflow to quickly turn this framework into [a fully functional software demo](https://zinaleeHQ.github.io/project-vista/dashboard/). 
 
 The live single-page React application was built using **v0.dev** for frontend code generation, with **Claude** as the system architecture collaborator for the KPI framework and governance model, **Gemini** for deployment pipeline support, hosted entirely on **GitHub Pages**.
 
