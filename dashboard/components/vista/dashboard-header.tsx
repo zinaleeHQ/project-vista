@@ -22,7 +22,7 @@ export function DashboardHeader({ role, theme, onToggleTheme }: DashboardHeaderP
             </h1>
             <div className="flex items-center gap-2">
               <a
-                href="https://github.com"
+                href="https://github.com/zinaleeHQ/project-vista"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-card px-3 py-1.5 text-xs font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
@@ -31,7 +31,7 @@ export function DashboardHeader({ role, theme, onToggleTheme }: DashboardHeaderP
                 View Project Vista
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/zinaleeHQ/project-vista/blob/main/PROCESS.md"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-card px-3 py-1.5 text-xs font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
