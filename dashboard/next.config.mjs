@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  basePath: '/project-vista/dashboard',
   typescript: {
     ignoreBuildErrors: true,
   },
