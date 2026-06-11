@@ -16,19 +16,19 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: './public/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: './public/apple-icon.png',
+        url: '/project-vista/dashboard/icon-light-32x32.png',
+      media: '(prefers-color-scheme: light)',
+    },
+    {
+      url: '/project-vista/dashboard/icon-dark-32x32.png',
+      media: '(prefers-color-scheme: dark)',
+    },
+    {
+      url: '/project-vista/dashboard/icon.svg',
+      type: 'image/svg+xml',
+    },
+  ],
+  apple: '/project-vista/dashboard/apple-icon.png',
   },
 }
 
