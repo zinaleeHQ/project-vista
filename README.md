@@ -13,6 +13,22 @@
 
 ---
 
+
+- ### 🚀 Live Interactive Simulation (AI-Augmented Prototype)
+
+To demonstrate how these governance boundaries and user views operate in practice, I used an AI-augmented rapid prototyping workflow to quickly turn this framework into a fully functional software demo. 
+
+The live single-page React application was built using **v0.dev** for frontend code generation, with **Claude** as the system architecture collaborator for the KPI framework and governance model, **Gemini** for deployment pipeline support, hosted entirely on **GitHub Pages**.
+
+**What you can do in the live simulation:**
+*   **Toggle 5 Stakeholder Personas:** Watch the strict data access boundaries instantly filter out unauthorized metrics in real-time.
+*   **Review Human-in-the-Loop Safeguards:** Click the **"Info"** buttons on any Red or Amber alert cards to see the explicit PM context notes designed to mitigate cognitive load and prevent executive misinterpretation.
+*   **Test the Prioritization Override Engine:** Use the toggle button at the bottom of the screen to switch between "Raw Framework Ranking" and "PM Sequenced Reality" to see the strategic clinical workflow sequencing override in action.
+*   **Fluid UX Sorting:** Grab any KPI metric card with your mouse cursor to drag, drop, and fluidly reorder the grid as it suits your viewing preference.
+
+---
+
+
 ## 🎯 The Operational Challenge
 
 Sprint 3 is complete. The HL7 mapping is stabilized. The clinician workflow is optimized. The billing reconciliation dashboard is built. Every stakeholder has received regular status updates — each one carefully curated by the PM for their specific audience.
@@ -46,7 +62,7 @@ This project documents an AI-assisted design of that operational intelligence la
 Three structured inputs feed the dashboard design engine. See the `/data` folder for full source files.
 
 ### KPI Framework
-A taxonomy of 16 KPIs across four categories — Clinical Operations, Financial/Revenue Cycle, Technical Infrastructure, and Operational Adoption — drawn directly from the work products of Projects Horizon, Clarity, and Signal. Each KPI includes a definition, data source, owner, target, and measurement frequency.
+A taxonomy of 17 KPIs across four categories — Clinical Operations, Financial/Revenue Cycle, Technical Infrastructure, and Operational Adoption — drawn directly from the work products of Projects Horizon, Clarity, and Signal. Each KPI includes a definition, data source, owner, target, and measurement frequency.
 
 ### Stakeholder Views
 A structured map defining what each of the five stakeholder audiences sees, what they explicitly do not see, and the PM rationale for the boundary. Reuses the Signal stakeholder registry as the foundation — the same audiences, now applied to a persistent visibility layer rather than a point-in-time communication.
@@ -101,7 +117,7 @@ project-vista/
 ├── README.md                         ← This document
 ├── PROCESS.md                        ← PM decision log and AI methodology
 ├── /data/
-│   ├── kpi-framework.md              ← 16-KPI taxonomy with owners and targets
+│   ├── kpi-framework.md              ← 17-KPI taxonomy with owners and targets
 │   ├── stakeholder-views.md          ← Per-audience access map and rationale
 │   └── data-sources.md               ← Source systems, freshness expectations, quality rules
 ├── /prompts/
@@ -118,7 +134,7 @@ project-vista/
 
 | Requirement | How This Project Demonstrates It |
 |---|---|
-| *"Analyze data and metrics to identify trends, gaps, and opportunities"* | 16-KPI taxonomy built from three prior project outputs, with RAG status and trend tracking per metric |
+| *"Analyze data and metrics to identify trends, gaps, and opportunities"* | 17-KPI taxonomy built from three prior project outputs, with RAG status and trend tracking per metric |
 | *"Design reporting frameworks that serve multiple stakeholder audiences"* | Five audience-filtered views with explicit access boundaries, embedded context rules, and a governance model |
 | *"Translate complex operational data into clear, actionable insights for leadership"* | Per-audience view specs designed around each stakeholder's primary metric and decision context |
 | *"Establish data governance standards and KPI ownership"* | Governance model assigns ownership, review cadence, escalation triggers, and data quality rules per KPI |
@@ -130,9 +146,9 @@ project-vista/
 
 The boundaries as set in this example for each stakeholder persona are judgment calls, not defaults. They reflect a specific organizational structure, trust dynamic, and decision-making culture. At a different company, every boundary in this document would need to be renegotiated from scratch — and that negotiation is the PM's job, not the AI's. These decisions require the PM to understand the company culture deeply enough to make the right call for each stakeholder group, or trust in that PM will erode.
 
+- **See PM Sequencing Logic in Action:** The dashboard reflects a deliberate sequencing decision — clinical workflow optimization was completed before the billing dashboard went live, ensuring the KPI baselines reflect accurate post-improvement data rather than a snapshot of a workflow already in transition. Toggle between views to see why baseline integrity is a PM decision, not a technical one.
 
 
----
 
 
 ## 🚀 Want to Try This Yourself?
