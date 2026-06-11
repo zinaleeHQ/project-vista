@@ -142,6 +142,20 @@ The pause point works exactly as designed. Someone running this prompt genuinely
 
 ---
 
+### 🚀 Live Interactive Simulation (AI-Augmented Prototype)
+
+To demonstrate how these governance boundaries and user views operate in practice, I used an AI-augmented rapid prototyping workflow to quickly turn this framework into [a fully functional software demo](https://zinaleeHQ.github.io/project-vista/dashboard/). 
+
+The live single-page React application was built using **v0.dev** for frontend code generation, with **Claude** as the system architecture collaborator for the KPI framework and governance model, **Gemini** for deployment pipeline support, hosted entirely on **GitHub Pages**.
+
+**What you can do in the live simulation:**
+*   **Toggle 5 Stakeholder Personas:** Watch the strict data access boundaries instantly filter out unauthorized metrics in real-time.
+*   **Review Human-in-the-Loop Safeguards:** Click the **"Info"** buttons on any Red or Amber alert cards to see the explicit PM context notes designed to mitigate cognitive load and prevent executive misinterpretation.
+*   **Test the Prioritization Override Engine:** Use the toggle button at the bottom of the screen to switch between "Raw Framework Ranking" and "PM Sequenced Reality" to see the strategic clinical workflow sequencing override in action.
+*   **Fluid UX Sorting:** Grab any KPI metric card with your mouse cursor to drag, drop, and fluidly reorder the grid as it suits your viewing preference.
+
+---
+
 *This document reflects my actual decision-making process in building this project. It is intended to give reviewers — technical and non-technical — an honest view of where the PM thinking ends and the AI tooling begins — and vice-versa.*
 
 *[Back to README](./README.md)*
