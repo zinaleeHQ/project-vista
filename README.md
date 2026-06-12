@@ -165,7 +165,7 @@ Each prompt pauses at a PM judgment checkpoint before the final phase. Answer "y
 
 ## 🔗 Portfolio Navigation
 
-This is **Agent 4 of 4** — the operational visibility layer that makes everything built in Agents 1–3 self-sustaining.
+This is **Prompt 4 of 4** — the operational visibility layer that makes everything built in Promopts 1–3 self-sustaining.
 
 | Project | Question Answered | Methodology |
 |---|---|---|
