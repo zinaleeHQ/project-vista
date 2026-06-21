@@ -3,6 +3,8 @@
 > **What this project is about, in plain language:**
 >
 > This project addresses what happens after the work is done: how do you give different stakeholders access to operational data without losing control of what they conclude from it? An AI tool designed the KPI framework, access architecture, and governance model. The PM's job is to make every boundary decision — who sees what and why — knowing that in a self-service system, those decisions are the only thing standing between the data and a misread that generates the wrong action.
+>
+> ***For the quickest look at how I work***, check out [the PROCESS page for Vista](https://github.com/zinaleeHQ/project-vista/blob/main/PROCESS.md).
 
 
 > **From Pushed Reports to Self-Service Visibility Across a Distributed Healthcare Enterprise**
