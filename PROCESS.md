@@ -127,7 +127,7 @@ The governance model correctly flags SOP Adoption and Training Completion as "Re
 
 ### Live run observations written by Claude *(from running this prompt with Claude)*
 (Asking AI to validate and test its data is usually a very valuable step in the prompt process.)
-
+'''
 *What held up well:*
 - The dependency chain is clean and the cascade timing is specific — that's genuinely useful output, not generic filler
 - The "explanation before metric" rule for the Field Lead view is a good catch that a lot of dashboard designers miss
@@ -139,6 +139,7 @@ The governance model correctly flags SOP Adoption and Training Completion as "Re
 
 *What this confirms about the prompt design:*
 The pause point works exactly as designed. Someone running this prompt genuinely has to stop, read five access boundary rationales, and decide whether they're right — before anything else generates. That's the judgment showcase doing its job.
+'''
 
 ---
 
