@@ -110,7 +110,7 @@ This dashboard also assumes a decision that happened before any of this design w
 
 There's a live page with a one-click **Copy Prompt** button — grabs the full prompt plus data, ready to paste into Claude, GPT-4, or Gemini.
 
-👉 [Open Project Vista Prompt Copy page](https://zinaleeHQ.github.io/project-vista/)
+›︎ [Open Project Vista Prompt Copy page](https://zinaleeHQ.github.io/project-vista/)
 
 It pauses at a judgment checkpoint before the final phase, same as the others. That's not a bug.
 
