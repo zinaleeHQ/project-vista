@@ -95,7 +95,7 @@ What needed pressure-testing against real data:
 What this confirms about the prompt design:
 The pause point works as intended. Running this prompt means actually stopping to read five access-boundary rationales and deciding whether they're right, before anything else generates. That's the judgment test doing its job.
 
-
+```
 ---
 
 *This document reflects my actual decision-making process in building this project. It is intended to give reviewers — technical and non-technical — an honest view of where the PM thinking ends and the AI tooling begins — and vice-versa.*
