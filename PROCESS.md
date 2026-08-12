@@ -6,7 +6,7 @@
 
 ## Why I Built This
 
-AI's pitch to business is usually some version of "everyone gets clarity, all the time." Frontline teams and the C-suite alike, always knowing the state of an initiative, where the blockers sit, what the risk picture looks like.
+Currently, AI's pitch to business is usually some version of "everyone gets clarity, all the time." Frontline teams and the C-suite alike, always knowing the state of an initiative, where the blockers sit, what the risk picture looks like.
 
 The part that pitch skips over: information without framing, especially bad news, doesn't create clarity. It creates confusion, or worse. Give everyone access to everything with no context attached, and you haven't solved a communication problem. You've built a machine for generating false alarms on a schedule.
 
@@ -60,7 +60,7 @@ What I owned was narrower and riskier: which KPIs actually belong in which categ
 
 ## What Happened When I Actually Ran It
 
-**Phase 0 was missing, and it mattered more than anything in the spec itself.** This entire design assumes a platform decision already happened — where the dashboard actually lives. That choice is out of scope for the portfolio, but it constrains almost everything: dynamic context-note editing, the PM governance overlay, offline caching for field views, the escalation alert layer. A static BI embed can't do any of that. An enterprise platform like Power BI or Tableau can do some of it. A purpose-built app can do all of it, at real cost. That's a PM/budgetary/permissions tradeoff, and it needs to happen before Phase 1, not after the spec's already written and everyone's attached to it.
+**Phase 0 was missing, and it mattered more than anything in the spec itself.** This entire design assumes a platform decision already happened — where the dashboard actually lives. That choice is out of scope for this portfolio, but it constrains almost everything: dynamic context-note editing, the PM governance overlay, offline caching for field views, the escalation alert layer. A static BI embed can't do any of that. An enterprise platform like Power BI or Tableau can do some of it. A purpose-built app can do all of it, at real cost. That's a PM/budgetary/permissions tradeoff, and it needs to happen before Phase 1, not after the spec's already written and everyone's attached to it.
 
 In practice, the right tool tracks organizational maturity. Jira dashboards work fine if the audience is engineering-only and the data's already native to Jira, but they can't reach EMR or billing data without custom integration. Confluence with connectors — EazyBI, an embedded Power BI or Tableau view — is the pragmatic middle path for a mid-market org without a full BI platform; audience-filtered page permissions map cleanly onto Vista's access model, and Confluence is a naturally good fit for the explanatory-text-next-to-red-metrics requirement. A full BI platform is the only path that properly handles dynamic access control and the escalation layer, but it assumes the org already has that tooling in place. Whichever path you take, the governance decisions — ownership, boundaries, context requirements, freshness thresholds — don't change. The platform changes the build cost and the ceiling. It doesn't change what makes the dashboard trustworthy.
 
