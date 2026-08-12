@@ -70,7 +70,7 @@ Every boundary in this table is a judgment call specific to this org's culture a
 
 ---
 
-### 🚀 Live Interactive Simulation
+### Live Interactive Simulation
 
 The governance rules above aren't just documented — they're running in [a working demo](https://zinaleeHQ.github.io/project-vista/dashboard/). Built with v0.dev for the frontend, Claude as system-architecture collaborator on the KPI and governance model, Gemini for deployment support, hosted on GitHub Pages.
 
