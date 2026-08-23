@@ -48,11 +48,11 @@ Four governance rules do most of the work here, and none of them are about what 
 
 ---
 
-## ⚙︎ How the Design Engine Works
+## ⚙︎ How the Agentic Orchestration Pipeline Works
 
-The prompt (`/prompts/dashboard-design-prompt.md`) won't generate a single stakeholder view until the KPI governance layer is fully defined — deliberately. It builds the taxonomy first (definitions, owners, targets, measurement frequency, pulled from the three prior projects' outputs), then applies the Signal stakeholder registry to determine actual access boundaries per audience, then specifies what each view shows on load versus what needs a drill-down, then generates the governance model itself — ownership, review cadence, escalation triggers, data quality rules.
+The underlying architecture relies on a deterministic, multi-stage prompt chain. The framework (/prompts/dashboard-design-prompt.md) acts as an orchestration engine that deliberately blocks autonomous generation of stakeholder views until a strict KPI governance and taxonomy layer is established.
 
-The sequencing matters as much as the content. You can't design who sees what until you've decided what's actually true.
+Rather than letting the model generate text freely, the system forces a structured sequence: it anchors itself to the 17-KPI taxonomy graph first, maps data dependencies, routes access parameters via the Signal registry, and enforces Human-in-the-Loop (HITL) checkpoints before any end-user artifact is finalized.
 
 ---
 
@@ -72,7 +72,7 @@ Every boundary in this table is a judgment call specific to this org's culture a
 
 ### Live Interactive Simulation
 
-The governance rules above aren't just documented — they're running in [a working demo](https://zinaleeHQ.github.io/project-vista/dashboard/). Built with v0.dev for the frontend, Claude as system-architecture collaborator on the KPI and governance model, Gemini for deployment support, hosted on GitHub Pages.
+The governance rules above aren't just documented — they're running in [a working demo](https://zinaleeHQ.github.io/project-vista/dashboard/) that exemplifies Heterogeneous Multi-Agent Orchestration. I acted as the human product owner directing an ensemble of specialized AI agents: Claude served as the system-architecture agent for data modeling, v0.dev acted as the front-end execution agent, and Gemini handled the deployment and hosting pipeline on GitHub Pages.
 
 Toggle between the five stakeholder personas and watch access boundaries filter data in real time. Click the info icons on any Red or Amber card to see the actual PM context notes. There's also a toggle comparing the raw framework ranking against the PM-sequenced reality, showing the clinical-workflow-before-billing-dashboard override in action — plus you can drag and reorder KPI cards however makes sense to you.
 
