@@ -11,7 +11,7 @@ That's the problem this project solves. The first three case studies in this por
 [![Methodology](https://img.shields.io/badge/Methodology-KPI%20Governance%20%7C%20Data%20Architecture-blue?style=flat-square)]()
 [![Domain](https://img.shields.io/badge/Domain-Healthcare%20IT%20%7C%20Operational%20Intelligence-teal?style=flat-square)]()
 [![Status](https://img.shields.io/badge/Status-Portfolio%20Simulation-orange?style=flat-square)]()
-[![AI-Architecture](https://shields.io/badge/AI-Architecture-red?style=flat-square)]()
+[![AI](https://shields.io/badge/AI%20Architecture-red?style=flat-square)]()
 
 ---
 
