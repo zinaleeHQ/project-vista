@@ -50,11 +50,13 @@ The actual call: surface it, but reframe it around downstream financial impact i
 
 ---
 
-## What the AI Handled, and What I Owned
+## What The Autonomous Agents Handled vs. What the PM Supervised
 
-The AI generated KPI definitions and measurement rules from the prior projects' data, designed the per-audience view specs, produced the governance model's ownership and cadence structure, drafted context notes for every Red KPI, and built the data-source and freshness mapping.
+The AI agents autonomously handled structured data transformations: mapping KPI metrics from raw inputs, executing role-based view splits, drafting contextual anomaly notes, and calculating data-freshness schemas.
 
-What I owned was narrower and riskier: which KPIs actually belong in which category, where every access boundary sits and why, which Red conditions trigger an active alert versus a passive display, whether the AI's context notes were actually accurate, and the call that freshness is a governance requirement rather than a technical footnote nobody reads. The AI can generate a governance model. It can't tell you whether the model is *right* for this specific org's trust dynamics. That's still on the PM, every time.
+What I owned was the Agent Risk Architecture & Cognitive Guardrails: configuring mathematical alert thresholds, defining semantic boundaries between conflicting roles (Finance vs. Ops), overriding prompt-sequencing based on real-world organizational maturity, and evaluating the qualitative accuracy of agent-generated context notes.
+
+That's a cascade of critical strategic decisions that an LLM cannot make autonomously: which KPIs actually belong in which category (Strategic Mapping), where every access boundary sits and why (Access Boundaries), which Red conditions trigger an active alert versus a passive display (Alert Orchestration), whether the AI's context notes were actually accurate (Output Validation), and a boundary that freshness is a governance requirement rather than a technical footnote nobody reads (Trust Governance). _(Apologies for the textbook verbiage in there; Gemini was deeply stressed about making sure a corporate ATS could find its favorite keywords.)_The AI can generate a governance model. It can't tell you whether the model is *right* for this specific org's trust dynamics; that's still on the PM, every time.
 
 ---
 
