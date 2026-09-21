@@ -2,7 +2,7 @@
 
 **A KPI dashboard showed a rollout metric sitting at Red in Week 4 of a six-week plan. That's not failure — it's a rollout in progress. But nobody had set a date for when "still rolling out" stops being a valid excuse, so the same Red status that was fine in Week 4 would have quietly stayed fine forever.**
 
-That's the problem this project solves. The first three case studies in this portfolio were about controlling what stakeholders see and when — a PM curating information before it reaches anyone. This one is about what happens after that control goes away: a self-service dashboard where anyone can look at any number, any time, with no PM standing between the data and the conclusion someone draws from it. A red metric without context isn't a data point anymore. It's a fire alarm with no exit sign.
+The first three case studies in this portfolio were about controlling what stakeholders see and when — a PM curating information before it reaches anyone. This one is about what happens after that control goes away: a self-service dashboard where anyone can look at any number, any time, with no PM standing between the data and the conclusion someone draws from it. A red metric without context isn't a data point anymore. It's a fire alarm with no exit sign.
 
 **[→ See how the governance rules actually got built](https://github.com/zinaleeHQ/project-vista/blob/main/PROCESS.md)** — same kind of thinking, more of it, including the phase that got skipped and the tool-selection tradeoff that would've changed everything downstream.
 
